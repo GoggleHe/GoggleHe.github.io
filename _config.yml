@@ -2,9 +2,9 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: https://GoggleHe.github.io
 date_format: "ordinal"
-title: 码志
+title: 个人博客
 subtitle: "GoggleHe的个人博客"
 description: "何领的个人博客"
 keywords: Ling He, GoggleHe, heling
@@ -54,8 +54,8 @@ navs:
     label: 首页
 
   -
-    href: /categories/
-    label: 分类
+    #href: /categories/
+    #label: 分类
 
 #   -
 #     href: /archives/
@@ -66,16 +66,16 @@ navs:
 #     label: 开源
 
   -
-    href: /wiki/
-    label: 维基
+    #href: /wiki/
+    #label: 维基
 
   -
-    href: /links/
-    label: 链接
+    #href: /links/
+    #label: 链接
 
   -
-    href: /about/
-    label: 关于
+    #href: /about/
+    #label: 关于
 
 # ---------------- #
 #       RSS        #
