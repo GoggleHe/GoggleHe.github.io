@@ -1,5 +1,4 @@
-_site/
-*.sw[po]
+_site/.*.sw[po]
 *.~vsd
 \#*\#
 *~
@@ -7,3 +6,7 @@ _site/
 Gemfile.lock
 .vscode/
 .jekyll-metadata
+
+.gitignore
+*.iml
+.idea
