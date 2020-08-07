@@ -20,7 +20,7 @@ declare @var_name varchar(32) default null;
 
 ###### 赋值
 
-```plsql
+```sql
 set  @var_name = 1;
 set  @var_name := 1;
 ```
@@ -72,7 +72,7 @@ select col1, col2 into var_name, var_name1 from table1;
 
 ###### 使用
 
-```plsql
+```sql
 select  var_name1; -- 或直接使用var_name1即可
 ```
 
@@ -88,14 +88,14 @@ select  var_name1; -- 或直接使用var_name1即可
 
 - 查询会话变量
 
-```mysql
+```sql
 show session variables;
 show variables；
 ```
 
 - 查询全局变量
 
-```mysql
+```sql
 show global variables;
 ```
 
@@ -103,7 +103,7 @@ show global variables;
 
 ###### 自定义系统变量
 
-```plsql
+```sql
 set GLOBAL sort_buffer_size=value;
 set @@global.sort_buffer_size=value;
 ```
