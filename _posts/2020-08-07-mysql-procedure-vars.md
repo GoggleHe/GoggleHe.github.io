@@ -3,9 +3,12 @@ layout: post
 title: MySQL存储过程——变量
 categories: [Blog]
 description: MySQL存储过程中变量的使用
-keywords: keyword1, keyword2
+keywords: MySQL, 存储过程
 ---
-##### 用户变量
+
+工作需要使用MySQL的存储过程批量修改一些数据，被MySQL的变量坑了好久，特此记录，以防再次踩坑。
+
+用户变量
 
 ###### 声明
 
