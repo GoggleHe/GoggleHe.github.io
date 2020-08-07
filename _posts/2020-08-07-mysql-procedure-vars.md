@@ -3,7 +3,7 @@ layout: post
 title: MySQL存储过程——变量
 categories: [Blog]
 description: MySQL存储过程中变量的使用
-keywords: MySQL, 存储过程
+keywords: MySQL, 存储过程, 变量
 ---
 
 工作需要使用MySQL的存储过程批量修改一些数据，被MySQL的变量坑了好久，特此记录，以防再次踩坑。
@@ -45,7 +45,7 @@ select  @var_name1; -- 或直接使用@var_name1即可
 
 - 当前会话，在同一个终端窗口重复执行一个定义了用户变量的存储过程，可以拿到上一次执行时的值
 
-##### 局部变量
+#### 局部变量
 
 ###### 声明
 
