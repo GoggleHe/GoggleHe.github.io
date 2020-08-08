@@ -124,7 +124,6 @@ call func(@inout1,@inout2); -- 调用
 select @inout1,@inout2; -- 验证结果
 ```
 ###### 执行结果
-
 ![mysql-procedure-parameters-default](/images/blog/mysql-procedure-parameters-default.png)
 
 - 解析了入参，但没有对变量产生副作用，说明默认是``in``类型参数
