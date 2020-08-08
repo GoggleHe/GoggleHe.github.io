@@ -8,9 +8,9 @@ keywords: MySQL, 存储过程,参数
 
 MySQL存储过程的参数的小案例和一些小总结
 
-#### 入参
+### 入参``IN``
 
-1. 声明带入参的存储过程
+###### 声明
 
 ```mysql
 DROP PROCEDURE IF EXISTS FUNC;
@@ -22,7 +22,7 @@ BEGIN
 END;
 ```
 
-2. 调用存储过程并传入参数值
+######  值调用
 
 ```mysql
 CALL FUNC(1,2);
@@ -30,7 +30,7 @@ CALL FUNC(1,2);
 
 ![mysql-procedure-parameters-in](/images/blog/mysql-procedure-parameters-in.png)
 
-3. 调用存储过程并传入变量
+###### 变量调用
 
 ```mysql
 select @in1,@in2;
@@ -38,13 +38,13 @@ call func(@in1,3);
 select @in1,@in2;
 ```
 
-![image-20200808152806622](C:\Users\73163\AppData\Roaming\Typora\typora-user-images\image-20200808152806622.png)
+![mysql-procedure-parameters-in2](/images/blog/mysql-procedure-parameters-in2.png)
 
 - 可见存储过程的``in``类型入参仅解析了变量的值，而不会变量本身产生副作用
 
-### 出参
+### 出参``OUT``
 
-1. 声明带出参的存储过程
+###### 声明
 
 ````mysql
 DROP PROCEDURE IF EXISTS FUNC;
@@ -57,7 +57,7 @@ BEGIN
 END;
 ````
 
-2. 调用存储过程并传入参数
+###### 调用
 
 ```mysql
 select @out1 := 888,@out2 := 999; -- 初始化
@@ -65,16 +65,16 @@ CALL FUNC(@out1,@out2); -- 执行存储过程
 select @out1,@out2; -- 查询变量调用存储过程后的值
 ```
 
-3. 输出结果
+###### 输出结果
 
-![image-20200808153441344](C:\Users\73163\AppData\Roaming\Typora\typora-user-images\image-20200808153441344.png)
+![mysql-procedure-parameters-out](/images/blog/mysql-procedure-parameters-out.png)
 
 - ``out``类型的参数只能传入变量
 - ``out``类型的参数并不会解析变量的值，如果存储过程有对``out``类型的参数赋值，该赋值会影响作为参数的变量
 
-### 出入参
+### 出入参``INOUT``
 
-1. 声明``inout``类型的存储过程
+###### 声明
 
 ```mysql
 DROP PROCEDURE IF EXISTS FUNC;
@@ -87,7 +87,7 @@ BEGIN
 END;
 ```
 
-2. 调用存储过程
+###### 调用
 
 ```mysql
 select 888,999 into @inout1,@inout2; -- 初始化
@@ -95,16 +95,17 @@ call func(@inout1,@inout2); -- 调用
 select @inout1,@inout2; -- 验证结果
 ```
 
-3. 输出结果
+###### 输出结果
 
-![image-20200808154224328](C:\Users\73163\AppData\Roaming\Typora\typora-user-images\image-20200808154224328.png)
+![mysql-procedure-parameters-inout](/images/blog/mysql-procedure-parameters-inout.png)
 
 - 可见``inout``类型参数结和了``in``和``out``类型，既会解析变量的值也会修改变量的值
 - ``inout``类型的参数也只能传入变量
 
-### 默认参数类型
+##### 默认
 
-1. 声明不带参数类型的存储过程
+###### 声明
+
 ```mysql
 DROP PROCEDURE IF EXISTS FUNC;
 CREATE PROCEDURE FUNC(in_out_var1 INT,in_out_var2 INT) 
@@ -115,15 +116,16 @@ BEGIN
 	SELECT in_out_var1,in_out_var2;
 END;
 ```
-1. 调用
+###### 调用
+
 ```mysql
 select 888,999 into @inout1,@inout2; -- 初始化
 call func(@inout1,@inout2); -- 调用
 select @inout1,@inout2; -- 验证结果
 ```
-2. 执行结果
+###### 执行结果
 
-![image-20200808155227089](C:\Users\73163\AppData\Roaming\Typora\typora-user-images\image-20200808155227089.png)
+![mysql-procedure-parameters-default](/images/blog/mysql-procedure-parameters-default.png)
 
 - 解析了入参，但没有对变量产生副作用，说明默认是``in``类型参数
 
