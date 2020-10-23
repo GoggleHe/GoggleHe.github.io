@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: top命令详解
+title: df命令帮助文档翻译
 categories: [Linux]
 description: df命令帮助文档翻译
 keywords: Linux, df
