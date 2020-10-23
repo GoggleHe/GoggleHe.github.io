@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: wiki
 title: jstat命令详解
-categories: [wiki]
+categories: [Java]
 description: jstat命令详解
-keywords: java, jdk, 命令, 性能监测
+keywords: Java, jdk, jstat
 ---
 
 
