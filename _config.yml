@@ -6,11 +6,12 @@ url: https://GoggleHe.github.io
 date_format: "ordinal"
 title: 个人博客
 subtitle: "GoggleHe的个人博客"
-description: "何领的个人博客"
+description: "何领个人博客"
 keywords: Ling He, GoggleHe, heling
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
+since: 2020
 repository: GoggleHe/GoggleHe.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
@@ -66,12 +67,17 @@ navs:
 #     label: 开源
 
   -
+    href: /fragments/
+    label: 片段
+
+  -
     href: /wiki/
     label: 维基
 
   -
     href: /links/
     label: 链接
+    mobile-hidden: true
 
   -
     href: /about/
@@ -107,6 +113,9 @@ collections:
     wiki:
         output: true
         permalink: /wiki/:path/
+    fragments:
+        output: true
+        permalink: /fragment/:path/
 
 # ---------------- #
 #      Comments    #
