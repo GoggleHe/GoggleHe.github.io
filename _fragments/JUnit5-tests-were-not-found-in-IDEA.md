@@ -12,8 +12,12 @@ mindmap: false
 mindmap2: false
 ---
 
-idea环境下老项目，新增模块，导入JUnit5包后，编写案例，结果提示**tests were not found**
+idea环境下老项目，执行单元测试，提示**tests were not found**
 
-解决方案
-
-- 删掉项目下.iml文件，重启idea并reimport该项目maven结构后解决
+- 老项目结构未更新导致
+  - 删掉项目下.iml文件，重启idea并reimport该项目maven结构后解决
+- 测试编写错误
+  - 方法级别必须为public或默认
+  - 返回值必须为void
+  - @Test注解修饰不能有入参
+  - @ParameterizedTest修饰必须有入参
