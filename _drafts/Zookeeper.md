@@ -114,3 +114,39 @@ zk设计上仅支持以下操作，确保简单性
 
 - 启动服务端：``bin/zkServer.sh start``
 - 启动客户端连接：``bin/zkCli.sh -server IP:PORT``
+
+## ZAB协议
+
+### 背景
+
+Zookeeper集群采用主从模式，一个leader服务器，其它均为follower。客户端随机连接一个服务器，读请求直接连接的服务读取并返回，写请求则统一发往leader服务，由leader处理并同步到其他follower。
+
+由此产生了2个问题：
+
+- leader如何将数据更新到所有的follower
+- 如果leader崩溃了，怎么处理
+
+### 工作原理
+
+#### 消息广播模式
+
+- leader将客户的request转化成一个Proposal（提议）
+- leader为每个follower维护了一个FIFO队列，将Proposal发送到队列上
+- 队列将提议发送给follower
+- follower为自己维护了一个历史队列，
+- 如果leader收到半数以上的ACK反馈
+- 则leader想所有follower发送commit
+
+#### 崩溃回复模式
+
+##### leader服务器的选取
+
+zookeeper节点状态
+
+- looking
+- leading
+- following
+
+选举流程
+
+- 
