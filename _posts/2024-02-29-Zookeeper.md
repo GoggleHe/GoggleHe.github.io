@@ -1,11 +1,3 @@
----
-layout: post
-title: Zookeeper
-categories: [Blog]
-description: Zookeeper
-keywords: 分布式, Zookeeper
----
-
 # Zookeeper
 
 - 分布式应用的协调服务
