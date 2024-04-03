@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 深入理解Java虚拟机——高效并发
-categories: [Blog]
+categories: [并发]
 description: 《深入理解Java虚拟机》——读书笔记
 keywords: JVM,JMM, 并发,多线程
 ---

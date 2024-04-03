@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 数据库设计规范
-categories: [Blog]
+categories: [MySQL]
 description: 数据库设计规范
 keywords: 数据库, 规范
 ---
