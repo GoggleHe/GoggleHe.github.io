@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL存储过程——变量
-categories: [Blog]
+categories: [MySQL]
 description: MySQL存储过程中变量的使用
 keywords: MySQL, 存储过程, 变量
 ---

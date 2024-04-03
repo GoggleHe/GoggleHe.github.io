@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 分布式锁
-categories: [Blog]
+categories: [分布式]
 description: 分布式锁
 keywords: 分布式, 锁, 分布式锁
 ---
