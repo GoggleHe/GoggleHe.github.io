@@ -1,8 +1,8 @@
 ---
 layout: fragment
-title: Fragment Template
+title: command of ssh in Linux
 tags: [Linux, SSH]
-description: Linux中SSH协议相关命令
+description: command of ssh in Linux
 keywords: Linux, SSH
 mermaid: false
 sequence: false
