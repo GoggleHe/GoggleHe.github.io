@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java并发编程实战
-categories: [Blog]
+categories: [并发]
 description: 极客时间课程笔记
 keywords: Java, 并发, 编程, 课程笔记
 ---
