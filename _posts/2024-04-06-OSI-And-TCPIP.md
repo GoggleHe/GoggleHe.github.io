@@ -18,7 +18,7 @@ keywords: IO,OSI,TCP,IP
 - 数据链路层（Data Link）
 - 物理层（Physical）
 
-![OSI七层模型示意图](../images/posts/osi-model.png)
+![OSI七层模型示意图](/images/posts/osi-model.png)
 
 第 7 层应用层 (Application Layer)
 
@@ -73,13 +73,13 @@ keywords: IO,OSI,TCP,IP
 
 #### 四层模型
 
-![TCPIP四层模型](../images/posts/tcpip-model.png)
+![TCPIP四层模型](/images/posts/tcpip-model.png)
 
 
 
 #### TCP生命周期
 
-![TCP三次握手与四次挥手生命周期示意图](../images/posts/tcp-handshake-wavehand-lifecycle.png)
+![TCP三次握手与四次挥手生命周期示意图](/images/posts/tcp-handshake-wavehand-lifecycle.png)
 
 ##### 三次握手
 
@@ -121,4 +121,3 @@ SYN 攻击是一个典型的 DDOS 攻击。检测 SYN 攻击非常的方便，�
 虽然按道理，四个报文都发送完毕，我们可以直接进入 CLOSE 状态了，但是我们必须假象网络是不可靠的，有可以最后一个 ACK 丢失。所以 TIME_WAIT 状态就是用来重发可能丢失的 ACK 报文。
 
 [OSI 七层模型与 TCP/IP 四层模型]: https://wsgzao.github.io/post/osi/
-
