@@ -83,6 +83,20 @@ boolean isWritable();//当且仅当I/O线程将立即执行请求的写入操作
 - 支持添加、移除、遍历、等操作
 - 支持向所有维护的Channel发送信息，信息由于网络原因会乱序
 
+## ChannelPipeline
+
+每个Channel都定义了一个ChannelPipeline，底层使用双向链表维护了多个ChannelHandlerContext，一个ChannelHandlerContext维护了一个ChannelHandler，其中ChannelHandler用于处理具体逻辑。
+
+Netty定义的HeadHandler和TailHandler永远位于链表的两端，开发者自定义的ChannelHandler根据插入顺序位于中间位置。
+
+ Netty中所有的操作（如：读、写、连接、异常处理等，可以参考LoggingHandler类中对事件的归纳）都被定义为事件，对每一个事件的处理，根据事件类型要么是从链表的头到尾，要么是链表尾到头的流程。
+
+并且Netty对事件模型的处理机制进行了优化，一般一个事件不会经过所有的ChannelHandler，会根据事件的类型跳过一些对该事件不会产生影响的ChannelHandler，但是流程顺序不会改变。如从输出信息时，不会经过ChannelInBoundHandler。
+
+TODO Netty的跳过机制： io.netty.channel.ChannelHandlerMask#isSkippable
+
+## ChannelHandlerContext
+
 ## EventLoop
 
 ### 继承实现关系
@@ -105,5 +119,7 @@ boolean isWritable();//当且仅当I/O线程将立即执行请求的写入操作
 Boss Group监听到新连接请求时，会将其注册到某个EventLoop的Selector上，并将其关联到对于的Channel对象。之后Worker Group将负责处理该已建立连接的全部读写操作
 
 EventLoopGroup支持优雅关闭，调用`shutdownGracefully()`，将不在接收新任务，旧任务全部完成后安全关闭
+
+
 
 ## ChannelReadEvent等
