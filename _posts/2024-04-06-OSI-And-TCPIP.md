@@ -18,7 +18,7 @@ keywords: IO,OSI,TCP,IP
 - 数据链路层（Data Link）
 - 物理层（Physical）
 
-![OSI七层模型示意图](E:\repository\github\GoggleHe.github.io\images\posts\osi-model.png)
+![OSI七层模型示意图](../images/posts/osi-model.png)
 
 第 7 层应用层 (Application Layer)
 
@@ -73,13 +73,13 @@ keywords: IO,OSI,TCP,IP
 
 #### 四层模型
 
-![TCPIP四层模型](E:\repository\github\GoggleHe.github.io\images\posts\tcpip-model.png)
+![TCPIP四层模型](../images/posts/tcpip-model.png)
 
 
 
 #### TCP生命周期
 
-![TCP三次握手与四次挥手生命周期示意图](E:\repository\github\GoggleHe.github.io\images\posts\tcp-handshake-wavehand-lifecycle.png)
+![TCP三次握手与四次挥手生命周期示意图](../images/posts/tcp-handshake-wavehand-lifecycle.png)
 
 ##### 三次握手
 
