@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Git常用命令
-categories: [GIt]
+categories: [Git]
 description: some word here
 keywords: Git常用命令
 type:
