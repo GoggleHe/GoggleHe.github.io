@@ -42,7 +42,7 @@ keywords: Java, Spring
 
 在Spring框架中，您可以使用以下接口来扩展Bean的生命周期：
 
-#### 2.1InitializingBean
+#### 2.1 InitializingBean
 
 通过实现InitializingBean接口，您的Bean可以在初始化阶段执行自定义逻辑。该接口包含一个afterPropertiesSet()方法，您可以在此方法中定义初始化逻辑。
 
