@@ -1,3 +1,11 @@
+---
+layout: post
+title: Redis集群
+categories: [Redis]
+description: Redis集群
+keywords: Redis
+---
+
 # Redis集群
 
 ## 介绍

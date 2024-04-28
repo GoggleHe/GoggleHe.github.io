@@ -1,3 +1,10 @@
+---
+layout: post
+title: Redis配置
+categories: [Redis]
+description: Redis配置
+keywords: Redis
+---
 # Redis配置
 
 ## 进程相关
