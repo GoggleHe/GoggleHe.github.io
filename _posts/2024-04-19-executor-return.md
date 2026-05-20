@@ -2,7 +2,7 @@
 layout: post
 title: 多线程获取返回值的方式
 categories: [多线程]
-description:多线程获取返回值的方式
+description: 多线程获取返回值的方式
 keywords: Java, Linux
 ---
 

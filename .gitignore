@@ -12,3 +12,5 @@ Gemfile.lock
 .idea
 
 _site/
+.bundle/
+vendor/
