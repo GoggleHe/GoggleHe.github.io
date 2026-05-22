@@ -14,3 +14,4 @@ Gemfile.lock
 _site/
 .bundle/
 vendor/
+_config.local.yml
